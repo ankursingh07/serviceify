@@ -3,6 +3,7 @@ package com.example.serviceify;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -16,7 +17,7 @@ import com.google.firebase.auth.FirebaseAuth;
 
 public class MainActivity extends AppCompatActivity
 {
-    private FirebaseAuth mAuth;
+     FirebaseAuth mAuth;
     EditText email,password;
     Button login;
     String temp="";
@@ -30,6 +31,7 @@ public class MainActivity extends AppCompatActivity
         email=findViewById(R.id.login_email);
         password=findViewById(R.id.login_password);
         login=findViewById(R.id.login_button);
+
         onLoginClick();
     }
     void onLoginClick()
@@ -37,9 +39,12 @@ public class MainActivity extends AppCompatActivity
         login.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                temp=email.getText().toString();
+                //temp=email.getText().toString();
+                //Login();
+                Intent intent = new Intent(MainActivity.this, HomeCustomer.class);
+                startActivity(intent);
                 //Toast.makeText(getApplicationContext(),temp,Toast.LENGTH_LONG).show();
-                Login();
+
             }
         });
     }
