@@ -1,4 +1,4 @@
-package com.example.serviceify;
+package Activities;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
@@ -10,6 +10,7 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
+import com.example.serviceify.R;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
@@ -17,7 +18,7 @@ import com.google.firebase.auth.FirebaseAuth;
 
 public class MainActivity extends AppCompatActivity
 {
-     FirebaseAuth mAuth;
+    FirebaseAuth mAuth;
     EditText email,password;
     Button login;
     String temp="";
@@ -43,6 +44,7 @@ public class MainActivity extends AppCompatActivity
                 //Login();
                 Intent intent = new Intent(MainActivity.this, HomeCustomer.class);
                 startActivity(intent);
+                finish();
                 //Toast.makeText(getApplicationContext(),temp,Toast.LENGTH_LONG).show();
 
             }

@@ -1,20 +1,26 @@
-package com.example.serviceify;
+package Adapter;
 
+import android.annotation.SuppressLint;
 import android.content.Context;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.example.serviceify.R;
+
 public class CategoryAdapter extends RecyclerView.Adapter<CategoryAdapter.ViewHolder> {
 
     Context context;
-    public CategoryAdapter(Context context) {
+    CategoryClickInterface categoryClickInterface;
+    public CategoryAdapter(Context context,CategoryClickInterface categoryClickInterface) {
         this.context=context;
+        this.categoryClickInterface=categoryClickInterface;
     }
 
     @NonNull
@@ -25,9 +31,17 @@ public class CategoryAdapter extends RecyclerView.Adapter<CategoryAdapter.ViewHo
     }
 
     @Override
-    public void onBindViewHolder(@NonNull CategoryAdapter.ViewHolder holder, int position)
+    public void onBindViewHolder(@NonNull CategoryAdapter.ViewHolder holder, @SuppressLint("RecyclerView") int position)
     {
         holder.text.setText("Hoooooo");
+        holder.image.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                categoryClickInterface.onClickCategory(position);
+                System.out.println("Clicked");
+                Toast.makeText(CategoryAdapter.this.context, "Clicked",Toast.LENGTH_LONG).show();
+            }
+        });
     }
 
     @Override
@@ -45,5 +59,9 @@ public class CategoryAdapter extends RecyclerView.Adapter<CategoryAdapter.ViewHo
             text=itemView.findViewById(R.id.text_card);
 
         }
+    }
+
+    public interface CategoryClickInterface{
+        public void onClickCategory(int position);
     }
 }
