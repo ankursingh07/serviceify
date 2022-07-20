@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.serviceify.Activities.ServiceScreen"
+
+    >
+
+
+
+        <ScrollView
+            android:layout_marginBottom="?attr/actionBarSize"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:scrollbarStyle="insideOverlay"
+            android:scrollbars="vertical"
+            android:overScrollMode="always">
+
+            <LinearLayout
+                android:layout_alignParentTop="true"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="?attr/actionBarSize"
+                android:orientation="vertical">
+
+                <TextView
+                    android:textColor="@color/black"
+                    android:layout_marginLeft="10dp"
+                    android:id="@+id/service_screen_title"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_gravity="left"
+                    android:layout_marginTop="10dp"
+                    android:gravity="center_vertical"
+                    android:maxLines="1"
+                    android:text="Service title"
+                    android:textSize="30sp"
+                    android:textStyle="bold" />
+                <TextView
+                    android:layout_marginRight="10dp"
+                    android:textColor="#80000000"
+                    android:layout_marginLeft="10dp"
+                    android:id="@+id/service_screen_address"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="left"
+                    android:layout_marginTop="10dp"
+                    android:gravity="center_vertical"
+                    android:maxLines="3"
+                    android:text="Address"
+                    android:textSize="16sp"/>
+                <RatingBar
+                    android:layout_marginTop="10dp"
+                    android:layout_marginLeft="10dp"
+                    android:clickable="false"
+                    style="?android:attr/ratingBarStyleIndicator"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:numStars="5"/>
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:orientation="horizontal"
+                    android:layout_marginTop="15dp"
+                    android:id="@+id/service_screen_image_recycler_view"
+                    android:layout_width="match_parent"
+                    android:layout_height="250dp"/>
+
+                <TextView
+                    android:id="@+id/service_screen_description"
+                    android:textSize="14sp"
+                    android:textColor="@color/black"
+                    android:text="Description"
+                    android:padding="10dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"/>
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:isScrollContainer="false"
+                    android:layout_marginTop="15dp"
+                    android:id="@+id/service_screen_reviews_recycler_view"
+                    android:layout_width="match_parent"
+                    android:layout_height="250dp"/>
+
+            </LinearLayout>
+
+        </ScrollView>
+
+        <LinearLayout
+            android:overScrollMode="never"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:layout_alignParentBottom="true">
+
+            <ImageButton
+                android:contentDescription="Call the service provider"
+                android:id="@+id/service_screen_call_button"
+                android:layout_gravity="start"
+                android:background="@drawable/ic_baseline_call_24"
+                android:layout_marginLeft="20dp"
+                android:layout_width="50dp"
+                android:layout_height="50dp"/>
+            <ImageButton
+                android:contentDescription="Message the service provider"
+                android:id="@+id/service_screen_message_button"
+                android:layout_gravity="start"
+                android:background="@drawable/ic_baseline_message_24"
+                android:layout_marginLeft="20dp"
+                android:layout_width="50dp"
+                android:layout_height="50dp"/>
+
+            <TextView
+                android:maxLines="1"
+                android:textSize="20sp"
+                android:text="Rs.200"
+                android:layout_marginLeft="120dp"
+                android:gravity="center"
+                android:textColor="@color/black"
+                android:textStyle="bold"
+                android:id="@+id/service_screen_service_cost"
+                android:layout_width="100dp"
+                android:layout_height="50dp"/>
+
+        </LinearLayout>
+
+
+
+</RelativeLayout>

@@ -7,7 +7,7 @@
     android:outlineAmbientShadowColor="@color/black"
     android:layout_height="200dp"
     android:layout_marginTop="10dp"
-    app:cardBackgroundColor="@color/white">
+    app:cardBackgroundColor="#BFEFFD">
     <LinearLayout
         android:orientation="vertical"
         android:layout_width="match_parent"
@@ -71,6 +71,7 @@
             </LinearLayout>
 
             <LinearLayout
+                android:layout_marginRight="10dp"
                 android:layout_marginLeft="5dp"
                 android:orientation="vertical"
                 android:layout_width="match_parent"
@@ -91,7 +92,7 @@
                     android:numStars="5"
                     android:clickable="false"
                     android:layout_marginTop="5dp"
-                    android:layout_width="match_parent"
+                    android:layout_width="wrap_content"
                     android:layout_height="22dp"/>
 
 
@@ -107,6 +108,7 @@
             android:layout_height="wrap_content">
 
             <ImageButton
+                android:contentDescription="Call the service provider"
                 android:id="@+id/card_call_button"
                 android:layout_gravity="start"
                 android:background="@drawable/ic_baseline_call_24"
@@ -114,6 +116,7 @@
                 android:layout_width="40dp"
                 android:layout_height="40dp"/>
             <ImageButton
+                android:contentDescription="Message the service provider"
                 android:id="@+id/card_message_button"
                 android:layout_gravity="start"
                 android:background="@drawable/ic_baseline_message_24"

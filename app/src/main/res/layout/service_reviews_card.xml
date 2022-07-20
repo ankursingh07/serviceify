@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="100dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    app:cardCornerRadius="20dp"
+    android:layout_margin="10dp"
+    app:cardBackgroundColor="@color/white">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:background="@drawable/profile_icon"
+                android:id="@+id/service_screen_reviews_recycler_view_profile_photo"
+                android:layout_gravity="left"
+                android:layout_width="50dp"
+                android:layout_height="50dp"/>
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="wrap_content"
+                android:layout_height="50dp"
+                android:layout_marginLeft="10dp">
+                <TextView
+                    android:maxLines="1"
+                    android:id="@+id/service_screen_reviews_recycler_view_name"
+                    android:textSize="16sp"
+                    android:textColor="@color/black"
+                    android:text="customer name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+                <RatingBar
+                    android:clickable="false"
+                    style="?attr/ratingBarStyleSmall"
+                    android:numStars="5"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+            </LinearLayout>
+            <TextView
+                android:text="16 Jul 2022 08:00 AM"
+                android:textColor="#80000000"
+                android:maxLines="1"
+                android:id="@+id/service_screen_reviews_recycler_view_time"
+                android:textSize="14sp"
+                android:layout_marginLeft="70dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+        </LinearLayout>
+        <TextView
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="10dp"
+            android:text="Review"
+            android:maxLines="6"
+            android:textSize="14sp"
+            android:textColor="@color/black"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/service_screen_reviews_recycler_view_text"/>
+    </LinearLayout>
+
+
+
+</androidx.cardview.widget.CardView>

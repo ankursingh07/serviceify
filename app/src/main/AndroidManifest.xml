@@ -13,17 +13,17 @@
         android:theme="@style/Theme.Serviceify"
         tools:targetApi="31">
         <activity
-            android:name=".CategorySearchResult"
+            android:name=".Activities.ServiceScreen"
             android:exported="false" />
         <activity
-            android:name="Activities.SignUp"
+            android:name=".Activities.SignUp"
             android:exported="false" />
         <activity
-            android:name="Activities.HomeCustomer"
+            android:name=".Activities.HomeCustomer"
             android:exported="false"
-            android:windowSoftInputMode="adjustPan"/>
+            android:windowSoftInputMode="adjustPan" />
         <activity
-            android:name="Activities.Login"
+            android:name=".Activities.Login"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

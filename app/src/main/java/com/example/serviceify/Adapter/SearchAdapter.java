@@ -1,5 +1,6 @@
-package Adapter;
+package com.example.serviceify.Adapter;
 
+import android.annotation.SuppressLint;
 import android.content.Context;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -12,10 +13,11 @@ import com.example.serviceify.R;
 
 public class SearchAdapter extends RecyclerView.Adapter<SearchAdapter.ViewHolder> {
 
-    Context context;
-
-    public SearchAdapter(Context context) {
+    private Context context;
+    private ClickServiceCard clickServiceCard;
+    public SearchAdapter(Context context,ClickServiceCard clickServiceCard) {
         this.context = context;
+        this.clickServiceCard=clickServiceCard;
     }
 
     @NonNull
@@ -26,7 +28,13 @@ public class SearchAdapter extends RecyclerView.Adapter<SearchAdapter.ViewHolder
     }
 
     @Override
-    public void onBindViewHolder(@NonNull SearchAdapter.ViewHolder holder, int position) {
+    public void onBindViewHolder(@NonNull SearchAdapter.ViewHolder holder, @SuppressLint("RecyclerView") int position) {
+        holder.itemView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                clickServiceCard.onClickServiceCard(position);
+            }
+        });
 
     }
 
@@ -41,5 +49,9 @@ public class SearchAdapter extends RecyclerView.Adapter<SearchAdapter.ViewHolder
 
             super(itemView);
         }
+    }
+
+    public interface ClickServiceCard{
+        public void onClickServiceCard(int position);
     }
 }

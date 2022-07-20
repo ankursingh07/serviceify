@@ -1,4 +1,4 @@
-package Fragments;
+package com.example.serviceify.Fragments;
 
 import android.os.Bundle;
 

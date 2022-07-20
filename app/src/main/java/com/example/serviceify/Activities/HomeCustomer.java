@@ -1,4 +1,4 @@
-package Activities;
+package com.example.serviceify.Activities;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
@@ -13,10 +13,10 @@ import android.view.MenuItem;
 import android.widget.FrameLayout;
 import android.widget.Toast;
 
-import Fragments.HomeFragement;
+import com.example.serviceify.Fragments.HomeFragement;
 import com.example.serviceify.R;
-import Fragments.ProfileFragment;
-import Fragments.SearchResultFragment;
+import com.example.serviceify.Fragments.ProfileFragment;
+import com.example.serviceify.Fragments.SearchResultFragment;
 
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.google.android.material.navigation.NavigationBarView;

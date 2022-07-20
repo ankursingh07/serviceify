@@ -1,4 +1,4 @@
-package Fragments;
+package com.example.serviceify.Fragments;
 
 import android.content.Context;
 import android.os.Bundle;
@@ -18,8 +18,7 @@ import android.widget.RelativeLayout;
 
 import com.example.serviceify.R;
 
-import Activities.HomeCustomer;
-import Adapter.CategoryAdapter;
+import com.example.serviceify.Adapter.CategoryAdapter;
 
 
 public class HomeFragement extends Fragment implements CategoryAdapter.CategoryClickInterface {
