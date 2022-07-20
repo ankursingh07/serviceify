@@ -16,6 +16,8 @@ import android.widget.Toast;
 import Fragments.HomeFragement;
 import com.example.serviceify.R;
 import Fragments.ProfileFragment;
+import Fragments.SearchResultFragment;
+
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.google.android.material.navigation.NavigationBarView;
 
@@ -52,6 +54,18 @@ public class HomeCustomer extends AppCompatActivity implements NavigationBarView
                 if(fragment1 instanceof HomeFragement){
                     bottomNavigationView.getMenu().findItem(R.id.home_nav).setChecked(true);
                 }
+                else if(fragment1 instanceof SearchResultFragment){
+                    bottomNavigationView.getMenu().findItem(R.id.home_nav).setChecked(true);
+                }
+                else if(fragment1 instanceof SearchResultFragment){
+                    bottomNavigationView.getMenu().findItem(R.id.home_nav).setChecked(true);
+                }
+                else if(fragment1 instanceof SearchResultFragment){
+                    bottomNavigationView.getMenu().findItem(R.id.home_nav).setChecked(true);
+                }
+                else if(fragment1 instanceof SearchResultFragment){
+                    bottomNavigationView.getMenu().findItem(R.id.home_nav).setChecked(true);
+                }
             }
         });
 
@@ -59,6 +73,9 @@ public class HomeCustomer extends AppCompatActivity implements NavigationBarView
 
     @Override
     public boolean onNavigationItemSelected(@NonNull MenuItem item) {
+        if(item.getItemId()==bottomNavigationView.getSelectedItemId()){
+            return false;
+        }
         switch (item.getItemId()){
             case R.id.home_nav:fragment=new HomeFragement();
                     break;

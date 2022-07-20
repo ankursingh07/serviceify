@@ -16,7 +16,7 @@ import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 
-public class MainActivity extends AppCompatActivity
+public class Login extends AppCompatActivity
 {
     FirebaseAuth mAuth;
     EditText email,password;
@@ -28,7 +28,7 @@ public class MainActivity extends AppCompatActivity
         getSupportActionBar().hide();
         mAuth = FirebaseAuth.getInstance();
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.activity_login);
         email=findViewById(R.id.login_email);
         password=findViewById(R.id.login_password);
         login=findViewById(R.id.login_button);
@@ -42,7 +42,7 @@ public class MainActivity extends AppCompatActivity
             public void onClick(View view) {
                 //temp=email.getText().toString();
                 //Login();
-                Intent intent = new Intent(MainActivity.this, HomeCustomer.class);
+                Intent intent = new Intent(Login.this, HomeCustomer.class);
                 startActivity(intent);
                 finish();
                 //Toast.makeText(getApplicationContext(),temp,Toast.LENGTH_LONG).show();

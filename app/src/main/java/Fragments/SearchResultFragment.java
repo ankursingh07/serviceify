@@ -38,24 +38,6 @@ public class SearchResultFragment extends Fragment {
         recyclerView=view.findViewById(R.id.search_customer_categories);
         recyclerView.setAdapter(adapter);
         recyclerView.setLayoutManager(linearLayoutManager);
-        view.requestFocus();
-        view.setFocusableInTouchMode(true);
-        view.setOnKeyListener(new View.OnKeyListener() {
-            @Override
-            public boolean onKey(View view, int i, KeyEvent keyEvent) {
-                if(i==KeyEvent.KEYCODE_BACK && keyEvent.getAction()==KeyEvent.ACTION_DOWN ){
-                    System.out.println("back pressed");
-                   fragment=new HomeFragement();
-                   fragmentManager=getParentFragmentManager();
-                   fragmentTransaction=fragmentManager.beginTransaction();
-                   fragmentManager.popBackStack(null, FragmentManager.POP_BACK_STACK_INCLUSIVE);
-                   fragmentTransaction.commit();
-                   return  true;
-                }
-                return false;
-            }
-        });
-
         return view;
     }
 

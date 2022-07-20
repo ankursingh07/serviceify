@@ -20,9 +20,10 @@
             android:exported="false" />
         <activity
             android:name="Activities.HomeCustomer"
-            android:exported="false" />
+            android:exported="false"
+            android:windowSoftInputMode="adjustPan"/>
         <activity
-            android:name="Activities.MainActivity"
+            android:name="Activities.Login"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

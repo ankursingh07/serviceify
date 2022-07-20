@@ -16,8 +16,8 @@ import com.example.serviceify.R;
 
 public class CategoryAdapter extends RecyclerView.Adapter<CategoryAdapter.ViewHolder> {
 
-    Context context;
-    CategoryClickInterface categoryClickInterface;
+    private Context context;
+    private CategoryClickInterface categoryClickInterface;
     public CategoryAdapter(Context context,CategoryClickInterface categoryClickInterface) {
         this.context=context;
         this.categoryClickInterface=categoryClickInterface;
@@ -38,8 +38,6 @@ public class CategoryAdapter extends RecyclerView.Adapter<CategoryAdapter.ViewHo
             @Override
             public void onClick(View view) {
                 categoryClickInterface.onClickCategory(position);
-                System.out.println("Clicked");
-                Toast.makeText(CategoryAdapter.this.context, "Clicked",Toast.LENGTH_LONG).show();
             }
         });
     }
