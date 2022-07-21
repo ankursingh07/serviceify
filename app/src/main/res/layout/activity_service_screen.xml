@@ -5,11 +5,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.example.serviceify.Activities.ServiceScreen"
-
-    >
-
-
+    tools:context="com.example.serviceify.Activities.ServiceScreen">
 
         <ScrollView
             android:layout_marginBottom="?attr/actionBarSize"
@@ -63,11 +59,10 @@
                     android:numStars="5"/>
 
                 <androidx.recyclerview.widget.RecyclerView
-                    android:orientation="horizontal"
                     android:layout_marginTop="15dp"
                     android:id="@+id/service_screen_image_recycler_view"
                     android:layout_width="match_parent"
-                    android:layout_height="250dp"/>
+                    android:layout_height="350dp"/>
 
                 <TextView
                     android:id="@+id/service_screen_description"
@@ -75,7 +70,7 @@
                     android:textColor="@color/black"
                     android:text="Description"
                     android:padding="10dp"
-                    android:layout_marginTop="10dp"
+                    android:layout_marginTop="5dp"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"/>
 
@@ -84,13 +79,14 @@
                     android:layout_marginTop="15dp"
                     android:id="@+id/service_screen_reviews_recycler_view"
                     android:layout_width="match_parent"
-                    android:layout_height="250dp"/>
+                    android:layout_height="400dp"/>
 
             </LinearLayout>
 
         </ScrollView>
 
         <LinearLayout
+            android:background="#BFEFFD"
             android:overScrollMode="never"
             android:layout_width="match_parent"
             android:layout_height="?attr/actionBarSize"
