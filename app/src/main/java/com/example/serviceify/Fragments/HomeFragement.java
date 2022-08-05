@@ -27,6 +27,7 @@ public class HomeFragement extends Fragment implements CategoryAdapter.CategoryC
     CategoryAdapter categoryAdapter;
     RecyclerView.Adapter adapter;
 
+
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {

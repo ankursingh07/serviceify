@@ -20,6 +20,10 @@ import com.example.serviceify.Fragments.SearchResultFragment;
 
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.google.android.material.navigation.NavigationBarView;
+import com.google.firebase.firestore.DocumentReference;
+import com.google.firebase.firestore.FirebaseFirestore;
+
+import Service.FetchService;
 
 public class HomeCustomer extends AppCompatActivity implements NavigationBarView.OnItemSelectedListener {
 
@@ -30,8 +34,13 @@ public class HomeCustomer extends AppCompatActivity implements NavigationBarView
     FragmentTransaction fragmentTransaction;
     String Username="";
     Intent intent;
+    public final FirebaseFirestore firebaseFirestore=FirebaseFirestore.getInstance();
+    final String customerDetailCollection="CustomerDetails";
+    final String serviceDetailCollection="ServiceDetails";
+    public DocumentReference documentReference;
     int i=0;
     BottomNavigationView bottomNavigationView;
+    //public final FetchService fetchService=new FetchService();
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         getSupportActionBar().hide();
@@ -45,6 +54,7 @@ public class HomeCustomer extends AppCompatActivity implements NavigationBarView
         fragmentTransaction.commit();
 
         bottomNavigationView.setOnItemSelectedListener(this);
+        //fetchService.fetchCustomerDetails();
 
         fragmentManager.addOnBackStackChangedListener(new OnBackStackChangedListener() {
             @Override
@@ -93,5 +103,10 @@ public class HomeCustomer extends AppCompatActivity implements NavigationBarView
         i++;
         fragmentTransaction.commit();
         return true;
+    }
+
+
+    void fetchServiceDetails(){
+
     }
 }
