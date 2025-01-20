@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    app:cardCornerRadius="10dp"
+    android:outlineSpotShadowColor="@color/black"
+    android:outlineAmbientShadowColor="@color/black"
+    android:layout_height="200dp"
+    android:layout_marginTop="10dp"
+    app:cardBackgroundColor="#BFEFFD">
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:layout_margin="10dp"
+                android:orientation="vertical"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:maxLines="1"
+                    android:text="Job Title"
+                    android:textColor="@color/black"
+                    android:textStyle="bold"
+                    android:textSize="24sp"
+                    android:id="@+id/card_service_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+                <TextView
+                    android:layout_marginTop="10dp"
+                    android:textColor="@color/black"
+                    android:textSize="14sp"
+                    android:id="@+id/card_service_address"
+                    android:text="Address"
+                    android:maxLines="3"
+                    android:layout_width="200dp"
+                    android:layout_height="50dp"/>
+
+                <LinearLayout
+                    android:layout_marginBottom="10dp"
+                    android:layout_marginTop="10dp"
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <TextView
+                        android:textColor="#80000000"
+                        android:textSize="12sp"
+                        android:text="Availability:"
+                        android:maxLines="1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"/>
+                    <TextView
+                        android:textSize="12sp"
+                        android:textColor="@color/black"
+                        android:layout_marginLeft="5dp"
+                        android:id="@+id/card_service_availability"
+                        android:text="availability"
+                        android:maxLines="1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"/>
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_marginRight="10dp"
+                android:layout_marginLeft="5dp"
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:background="@drawable/doctor"
+                    android:scaleType="centerCrop"
+                    android:id="@+id/card_service_image"
+                    android:layout_marginTop="10dp"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"/>
+                <RatingBar
+                    style="?android:attr/ratingBarStyleSmall"
+                    android:stepSize="0.1"
+                    android:layout_gravity="center"
+                    android:numStars="5"
+                    android:clickable="false"
+                    android:layout_marginTop="5dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="22dp"/>
+
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageButton
+                android:contentDescription="Call the service provider"
+                android:id="@+id/card_call_button"
+                android:layout_gravity="start"
+                android:background="@drawable/ic_baseline_call_24"
+                android:layout_marginLeft="20dp"
+                android:layout_width="40dp"
+                android:layout_height="40dp"/>
+            <ImageButton
+                android:contentDescription="Message the service provider"
+                android:id="@+id/card_message_button"
+                android:layout_gravity="start"
+                android:background="@drawable/ic_baseline_message_24"
+                android:layout_marginLeft="20dp"
+                android:layout_width="40dp"
+                android:layout_height="40dp"/>
+
+            <TextView
+                android:maxLines="1"
+                android:textSize="20sp"
+                android:text="Rs.200"
+                android:layout_marginLeft="120dp"
+                android:gravity="center"
+                android:textColor="@color/black"
+                android:textStyle="bold"
+                android:id="@+id/card_service_cost"
+                android:layout_gravity=""
+                android:layout_width="100dp"
+                android:layout_height="50dp"/>
+
+
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+
+</androidx.cardview.widget.CardView>

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+             android:layout_width="250dp"
+             android:layout_height="300dp"
+    android:layout_gravity="center_horizontal"
+    android:layout_margin="10dp">
+  <ImageView
+      android:scaleType="fitCenter"
+      android:background="@drawable/doctor"
+      android:id="@+id/service_screen_image_recycler_view_image"
+      android:layout_width="match_parent"
+      android:layout_height="match_parent"/>
+
+</androidx.cardview.widget.CardView>

@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.serviceify.Fragments.ProfileFragment">
+
+    <!-- TODO: Update blank fragment layout -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+        <ImageView
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_gravity="end"
+            android:layout_margin="10dp"
+            android:background="@drawable/log_out_icon"
+            android:id="@+id/logout_button"/>
+        
+        <ImageView
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:id="@+id/customer_profile_photo"
+            android:layout_gravity="center_horizontal"
+            android:background="@drawable/profile_icon"/>
+
+        <TextView
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="10dp"
+            android:layout_width="wrap_content"
+            android:layout_height="20dp"
+            android:text="Name"/>
+        <TextView
+            android:id="@+id/customer_user_name"
+            android:layout_marginLeft="10dp"
+            android:textSize="24dp"
+            android:textColor="@color/black"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:text="Atul"/>
+
+
+        <TextView
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="10dp"
+            android:layout_width="wrap_content"
+            android:layout_height="20dp"
+            android:text="Email"/>
+        <TextView
+            android:id="@+id/customer_email"
+            android:layout_marginLeft="10dp"
+            android:textSize="24dp"
+            android:textColor="@color/black"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:text="123@gmail.com"/>
+
+        <TextView
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="10dp"
+            android:layout_width="wrap_content"
+            android:layout_height="20dp"
+            android:text="Phone number"/>
+        <TextView
+            android:id="@+id/customer_phone"
+            android:layout_marginLeft="10dp"
+            android:textSize="24dp"
+            android:textColor="@color/black"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:text="1234567890"/>
+
+        <TextView
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="10dp"
+            android:layout_width="wrap_content"
+            android:layout_height="20dp"
+            android:text="Address"/>
+        <TextView
+            android:id="@+id/customer_address"
+            android:layout_marginLeft="10dp"
+            android:textSize="24dp"
+            android:textColor="@color/black"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:text="1234567890"/>
+
+    </LinearLayout>
+   
+
+</RelativeLayout>
